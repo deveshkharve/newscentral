@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 def checkIsValidLink(link, domain):
 
-    if not link or link[0] == '#':
+    if not link or link[0] == '#' or link.startswith('mailto'):
         return False
 
     if not urllib.parse.urlparse(link).hostname:
@@ -59,3 +59,6 @@ def loadPayload(data):
 def jsonStringify(data):
     return json.dumps(data)
 
+
+def getUrlDomain(url):
+    return urllib.parse.urlparse(url).hostname

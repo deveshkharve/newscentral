@@ -18,7 +18,7 @@ class TaskQueue:
             return item
 
     def addTask(self, args):
-        self.redisQueue.rpush(self.name, utils.stringifyPayload(args))
+        self.redisQueue.rpush(self.name, utils.stringifyPayload(list(args)))
 
     def addBatch(self, links, domain):
         for link in links:

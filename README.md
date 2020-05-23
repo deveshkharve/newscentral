@@ -32,13 +32,7 @@ Each master in turn spawns multiple thread to for scrapping and writing data to 
 
 ```crawlerutils.py``` utilities to work with scrapping and dumping the data into .json file.
 
-###### Note
-This is only able to parse data from the three domains
-- https://timesofindia.indiatimes.com
-- https://in.reuters.com
-- https://in.finance.yahoo.com
+```newspaper3k``` newspaper package to parse the articles
 
-we have a RSS parser, but we are not using it out of the box.
-We can add different parsers to handle data from various domains. 
-A generic parsers is possible only when the websites is having a generic structure which is not the case.
+``redis`` to handle the queue.  
 
