@@ -29,9 +29,9 @@ def writer(writeQueue):
             if writeQueue.exists(req[0]):
                 continue
 
-            writeQueue.register(req[0], {})
             utils.logging.debug('writing file: '+req[0])
             createRecord(*req)
+            writeQueue.register(req[0], req[1])
 
         utils.logging.debug('queue empty')
         utils.sleep(5)
