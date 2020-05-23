@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="2">
+    <title>Stats</title>
+</head>
+<body>
+{{ status }}
+
+<br>
+<hr/>
+page auto-refreshes every 2 seconds. To stop the crawler click <a href="/stop">here</a>
+<hr/>
+<ul>
+    {% for file in files %}
+    <li><a href="{{ file }}">{{ file }}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>
