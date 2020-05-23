@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 from helpers.utils import getAllLinks, jsonStringify, getUrlDomain
-# from parser import parseYahoo, parseTimeofindia, parseReuters
 import logging
 logging.basicConfig(level=logging.DEBUG)
 from newspaper import Article
